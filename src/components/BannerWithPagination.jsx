@@ -55,8 +55,7 @@ const BannerWithPagination = () => {
   return (
     <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6] gap-5">
       {/* Banner Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] min-h-screen 
-      xxs:h-[50%] lg:h-[40%] bg-[#fdfbf6] xxs:flex-col items-center w-full  flex gap-5">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] min-h-screen  lg:h-[40%] bg-[#fdfbf6] xxs:flex-col items-center w-full  flex gap-5">
         {/* Right Content (Image) */}
         <div className="relative w-full lg:w-1/2 h-full order-1 lg:order-2">
           <img
