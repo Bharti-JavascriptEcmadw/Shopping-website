@@ -10,7 +10,7 @@ module.exports = {
         xl: "1280px", // Extra large screens
         "2xl": "1536px", // 2x large screens
         // Custom breakpoints (optional)
-        xxs: "350px", // Small mobile devices
+        xxs: "200px", // Small mobile devices
         xxxl: "1920px", // Large desktop or TV screens
       },
     },

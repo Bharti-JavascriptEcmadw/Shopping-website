@@ -53,7 +53,7 @@ const BannerWithPagination = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6] xss:gap-4">
+    <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6]">
       {/* Banner Content */}
       <div className="flex flex-col lg:flex-row items-center justify-between w-[100%] max-w-[1500px] h-[80%] bg-[#fdfbf6]">
         {/* Right Content (Image) */}
@@ -66,28 +66,30 @@ const BannerWithPagination = () => {
         </div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex justify-space-between gap-7">
-        <div>
-          <h1 className="text-3xl font-semibold text-gray-800 mt-6">
-            {banners[currentPage].logo}
-          </h1></div>
-          <div>
-          <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
-            {banners[currentPage].head}
-          </p>
+        <div className="w-full lg:w-1/2 p-4 lg:p-10 space-y-6 order-2 lg:order-1 flex flex-col justify-between gap-4">
+  <div>
+    <h1 className="text-xl lg:text-3xl font-semibold text-gray-800 mt-4">
+      {banners[currentPage].logo}
+    </h1>
+  </div>
+  <div>
+    <p className="text-xs lg:text-sm font-semibold text-gray-900 mt-2 mb-3">
+      {banners[currentPage].head}
+    </p>
 
-          <h2 className="text-4xl font-semibold text-gray-800 mb-5">
-            {banners[currentPage].title}
-          </h2>
-          <p className="text-lg text-gray-600 mb-5">
-            {banners[currentPage].description}
-          </p>
-          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white xxs:p-2 ">
-            {banners[currentPage].button}
-            <span className="ml-2">&rarr;</span>
-          </button>
-          </div>
-        </div>
+    <h2 className="text-2xl lg:text-4xl font-semibold text-gray-800 mb-3">
+      {banners[currentPage].title}
+    </h2>
+    <p className="text-sm lg:text-lg text-gray-600 mb-4">
+      {banners[currentPage].description}
+    </p>
+    <button className="flex items-center px-4 py-2 lg:px-6 lg:py-3 text-xs lg:text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
+      {banners[currentPage].button}
+      <span className="ml-2">&rarr;</span>
+    </button>
+  </div>
+</div>
+
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
