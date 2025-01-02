@@ -96,7 +96,7 @@ const BannerWithPagination = () => {
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-5 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col lg:flex-row items-center space-x-3 space-y-3 lg:space-y-0 lg:space-x-3">
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row items-center justify-center space-x-3 sm:space-x-6 space-y-3 sm:space-y-0">
         {/* Pagination Bullets */}
         <div className="flex space-x-2 sm:space-x-3">
           {banners.map((_, index) => (
