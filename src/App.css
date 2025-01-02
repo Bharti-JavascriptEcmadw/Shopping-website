@@ -10,3 +10,6 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
 }
+.overflow-hidden {
+  overflow: hidden;
+}
