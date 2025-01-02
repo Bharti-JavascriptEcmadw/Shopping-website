@@ -20,7 +20,7 @@ const BannerWithPagination = () => {
       head:"Online only",
       title: "Four bundles for hair, hands",
       description:
-        "Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
+        " Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
       button: "Explore Bundles",
       image: "/assets/img/6m.jpg",
     },
@@ -55,7 +55,7 @@ const BannerWithPagination = () => {
   return (
     <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6]">
       {/* Banner Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] h-[80%] lg:h-[40%] bg-[#fdfbf6]">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] h-[60%] lg:h-[40%] bg-[#fdfbf6]">
         {/* Right Content (Image) */}
         <div className="relative w-full lg:w-1/2 h-full order-1 lg:order-2">
           <img
