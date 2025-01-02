@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 
 const Navbar = () => {
   return (
-    <nav className="bg-pink-100 text-gray-800 py-5 border-b border-gray-300">
+    <nav className="bg-gray-900 text-white py-5 border-b border-gray-300">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between flex-wrap">
         <div className="w-full flex items-center justify-between">
           {/* Left Navigation Links */}
@@ -88,7 +88,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-6 text-sm font-medium">
             {/* Material-UI Search Icon */}
             <button className="focus:outline-none">
-              <SearchIcon className="text-gray-800 w-5 h-5" />
+              <SearchIcon className="text-white w-5 h-5" />
             </button>
 
             <a href="#" className="hover:underline">

@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="bg-gray-900 text-white text-center text-sm py-2 px-4 sm:text-base md:text-lg">
+    <header className="bg-gray-700 text-white text-center text-sm py-2 px-4 sm:text-base md:text-lg">
       <p>
         Kindly note, due to the Christmas public holidays, the processing of
         orders may be delayed.{" "}
