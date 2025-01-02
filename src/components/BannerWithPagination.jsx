@@ -8,7 +8,7 @@ const BannerWithPagination = () => {
   const banners = [
     {
       logo: "Aēsop.",
-      head:"Online only",
+      head: "Online only",
       title: "Timely gifts",
       description:
         "With the festivities fast-approaching, explore a range of gifts fit for all manner of recipients, ready to deliver or collect in-store.",
@@ -17,7 +17,7 @@ const BannerWithPagination = () => {
     },
     {
       logo: "Aēsop.",
-      head:"Online only",
+      head: "Online only",
       title: "Four bundles for hair, hands and home",
       description:
         "The Home Necessities Duo, Adventurer Hand Care Trio, Basin Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
@@ -26,7 +26,7 @@ const BannerWithPagination = () => {
     },
     {
       logo: "Aēsop.",
-      head:"Token of Appreciation",
+      head: "Token of Appreciation",
       title: "Corporate gifts",
       description:
         "Find a variety of gift-giving options, ideal for honouring treasured colleagues and clients. Trained consultants will be pleased to guide your selections and assist with delivery.",
@@ -53,10 +53,9 @@ const BannerWithPagination = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6] xss:gap-4">
+    <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6] gap-4">
       {/* Banner Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-[100%] max-w-[1500px] max-h-[90%]
-      xss:h-auto bg-red-500">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] h-auto bg-red-500">
         {/* Right Content (Image) */}
         <div className="relative w-full lg:w-1/2 h-full order-1 lg:order-2">
           <img
@@ -67,26 +66,27 @@ const BannerWithPagination = () => {
         </div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex justify-space-between gap-7 xxs:gap-4 xxs:text-sm ">
-        <div>
-          <h1 className="text-3xl font-semibold text-gray-800 mt-6">
-            {banners[currentPage].logo}
-          </h1></div>
+        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex-col justify-between gap-7 text-sm">
           <div>
-          <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
-            {banners[currentPage].head}
-          </p>
+            <h1 className="text-3xl font-semibold text-gray-800 mt-6">
+              {banners[currentPage].logo}
+            </h1>
+          </div>
+          <div>
+            <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
+              {banners[currentPage].head}
+            </p>
 
-          <h2 className="text-4xl font-semibold text-gray-800 mb-5">
-            {banners[currentPage].title}
-          </h2>
-          <p className="text-lg xxs:text-sm text-gray-600 mb-5">
-            {banners[currentPage].description}
-          </p>
-          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white  xxs:text-sm xxs:p-3 ">
-            {banners[currentPage].button}
-            <span className="ml-2">&rarr;</span>
-          </button>
+            <h2 className="text-4xl font-semibold text-gray-800 mb-5">
+              {banners[currentPage].title}
+            </h2>
+            <p className="text-lg text-gray-600 mb-5">
+              {banners[currentPage].description}
+            </p>
+            <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
+              {banners[currentPage].button}
+              <span className="ml-2">&rarr;</span>
+            </button>
           </div>
         </div>
       </div>
