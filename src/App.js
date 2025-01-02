@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Features from "./components/Features";
 
-import ExploreSection from "./components/ExploreSection";
+
 import Footer from "./components/Footer";
 import './App.css'
 import Navbar from "./components/Navbar";

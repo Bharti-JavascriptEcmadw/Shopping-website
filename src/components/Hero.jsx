@@ -26,10 +26,13 @@ const Hero = () => {
               will swaddle your purchases when you select the ‘gift packaging’ option
               at checkout. Exclusions apply.
             </p>
-            <button className="flex items-center px-7 py-4 border border-gray-800 text-gray-800 hover:bg-gray-100 text-sm lg:text-base">
-              Explore gifts
-              <span className="ml-5">&rarr;</span>
-            </button>
+            {/* Center the button on mobile view */}
+            <div className="flex justify-center">
+              <button className="flex items-center px-7 py-4 border border-gray-800 text-gray-800 hover:bg-gray-100 text-sm lg:text-base">
+                Explore gifts
+                <span className="ml-5">&rarr;</span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

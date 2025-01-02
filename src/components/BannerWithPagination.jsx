@@ -8,7 +8,7 @@ const BannerWithPagination = () => {
   const banners = [
     {
       logo: "Aēsop.",
-      head:"Online only",
+      head: "Online only",
       title: "Timely gifts",
       description:
         "With the festivities fast-approaching, explore a range of gifts fit for all manner of recipients, ready to deliver or collect in-store.",
@@ -17,7 +17,7 @@ const BannerWithPagination = () => {
     },
     {
       logo: "Aēsop.",
-      head:"Online only",
+      head: "Online only",
       title: "Four bundles for hair, hands and home",
       description:
         "The Home Necessities Duo, Adventurer Hand Care Trio, Basin Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
@@ -26,7 +26,7 @@ const BannerWithPagination = () => {
     },
     {
       logo: "Aēsop.",
-      head:"Token of Appreciation",
+      head: "Token of Appreciation",
       title: "Corporate gifts",
       description:
         "Find a variety of gift-giving options, ideal for honouring treasured colleagues and clients. Trained consultants will be pleased to guide your selections and assist with delivery.",
@@ -66,26 +66,31 @@ const BannerWithPagination = () => {
         </div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex justify-space-between gap-7">
-        <div>
-          <h1 className="text-3xl font-semibold text-gray-800 mt-6">
-            {banners[currentPage].logo}
-          </h1></div>
-          <div>
-          <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
-            {banners[currentPage].head}
-          </p>
+        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex-col justify-center items-center lg:items-start gap-7">
+          {/* Logo and Head Text (Centered on Mobile) */}
+          <div className="text-center lg:text-left">
+            <h1 className="text-3xl font-semibold text-gray-800 mt-6">
+              {banners[currentPage].logo}
+            </h1>
+            <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
+              {banners[currentPage].head}
+            </p>
+          </div>
 
-          <h2 className="text-4xl font-semibold text-gray-800 mb-5">
+          {/* Title and Description */}
+          <h2 className="text-4xl font-semibold text-gray-800 mb-5 text-center lg:text-left">
             {banners[currentPage].title}
           </h2>
-          <p className="text-lg text-gray-600 mb-5">
+          <p className="text-lg text-gray-600 mb-5 text-center lg:text-left">
             {banners[currentPage].description}
           </p>
-          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
-            {banners[currentPage].button}
-            <span className="ml-2">&rarr;</span>
-          </button>
+
+          {/* Button */}
+          <div className="flex justify-center">
+            <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
+              {banners[currentPage].button}
+              <span className="ml-2">&rarr;</span>
+            </button>
           </div>
         </div>
       </div>

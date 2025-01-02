@@ -19,7 +19,7 @@ const BottomSection = () => {
   return (
     <div className="w-full max-w-[1200px] mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8 px-4">
       {cards.map((card, index) => (
-        <div key={index} className="flex flex-col items-start">
+        <div key={index} className="flex flex-col items-center text-center">
           <img
             src={card.image}
             alt={card.title}
