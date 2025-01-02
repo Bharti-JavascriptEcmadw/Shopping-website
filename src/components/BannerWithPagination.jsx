@@ -22,7 +22,7 @@ const BannerWithPagination = () => {
       description:
         "The Home Necessities Duo, Adventurer Hand Care Trio, Basin Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
       button: "Explore Bundles",
-      image: "/assets/img/2.jpg",
+      image: "/assets/img/6m.jpg",
     },
     {
       logo: "Aēsop.",
@@ -31,7 +31,7 @@ const BannerWithPagination = () => {
       description:
         "Find a variety of gift-giving options, ideal for honouring treasured colleagues and clients. Trained consultants will be pleased to guide your selections and assist with delivery.",
       button: "Learn More About the Services",
-      image: "/assets/img/3.jpg",
+      image: "/assets/img/4l.jpg",
     },
   ];
 
@@ -66,17 +66,15 @@ const BannerWithPagination = () => {
         </div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex justify-space-between gap-7">
-        <div>
+        <div className="w-full lg:w-1/2 p-5 lg:p-10 space-y-6 order-2 lg:order-1 flex flex-col gap-5">
           <h1 className="text-3xl font-semibold text-gray-800 mt-6">
             {banners[currentPage].logo}
-          </h1></div>
-          <div>
+          </h1>
           <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
             {banners[currentPage].head}
           </p>
 
-          <h2 className="text-4xl font-semibold text-gray-800 mb-5">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-800 mb-5">
             {banners[currentPage].title}
           </h2>
           <p className="text-lg text-gray-600 mb-5">
@@ -86,7 +84,6 @@ const BannerWithPagination = () => {
             {banners[currentPage].button}
             <span className="ml-2">&rarr;</span>
           </button>
-          </div>
         </div>
       </div>
 
@@ -107,7 +104,7 @@ const BannerWithPagination = () => {
         {/* Pause/Play Button with Material UI Icons */}
         <button
           onClick={togglePause}
-          className={`ml-4 p-2 rounded-full ${isPaused ? "bg-white" : "bg-white"} hover:bg-opacity-80`}
+          className={`ml-4 p-2 rounded-full bg-white hover:bg-opacity-80`}
         >
           {isPaused ? (
             <PlayArrow className="w-6 h-6 text-black" />
