@@ -91,7 +91,7 @@ const BannerWithPagination = () => {
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-[-10rem] mb-5 flex items-center space-x-3 xxs:bottom-[-1.8rem]">
+      <div className="absolute  mb-5 flex items-center space-x-3 xxs:bottom-[-1.8rem]">
         {banners.map((_, index) => (
           <button
             key={index}
