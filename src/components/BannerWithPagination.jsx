@@ -66,28 +66,28 @@ const BannerWithPagination = () => {
         </div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex-col justify-center items-center lg:items-start gap-7">
+        <div className="w-full lg:w-1/2 p-4 sm:p-6 md:p-10 space-y-4 sm:space-y-6 lg:space-y-7 order-2 lg:order-1 flex flex-col justify-center items-center lg:items-start gap-4 sm:gap-6 lg:gap-7">
           {/* Logo and Head Text (Centered on Mobile) */}
           <div className="text-center lg:text-left">
-            <h1 className="text-3xl font-semibold text-gray-800 mt-6">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-gray-800 mt-4 sm:mt-6">
               {banners[currentPage].logo}
             </h1>
-            <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
+            <p className="text-xs sm:text-sm font-semibold text-gray-900 mt-2 mb-4 sm:mb-5">
               {banners[currentPage].head}
             </p>
           </div>
 
           {/* Title and Description */}
-          <h2 className="text-4xl font-semibold text-gray-800 mb-5 text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl font-semibold text-gray-800 mb-4 sm:mb-5 text-center lg:text-left">
             {banners[currentPage].title}
           </h2>
-          <p className="text-lg text-gray-600 mb-5 text-center lg:text-left">
+          <p className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-5 text-center lg:text-left">
             {banners[currentPage].description}
           </p>
 
           {/* Button */}
           <div className="flex justify-center">
-            <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
+            <button className="flex items-center px-4 sm:px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
               {banners[currentPage].button}
               <span className="ml-2">&rarr;</span>
             </button>
@@ -96,14 +96,14 @@ const BannerWithPagination = () => {
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col lg:flex-row items-center space-x-3 space-y-3 lg:space-y-0 lg:space-x-3">
+      <div className="absolute bottom-5 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col lg:flex-row items-center space-x-3 space-y-3 lg:space-y-0 lg:space-x-3">
         {/* Pagination Bullets */}
-        <div className="flex space-x-3">
+        <div className="flex space-x-2 sm:space-x-3">
           {banners.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentPage(index)}
-              className={`w-4 h-4 rounded-full ${
+              className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full ${
                 currentPage === index
                   ? "bg-gray-800"
                   : "bg-gray-300 hover:bg-gray-900"
@@ -115,7 +115,7 @@ const BannerWithPagination = () => {
         {/* Pause/Play Button with Material UI Icons */}
         <button
           onClick={togglePause}
-          className={`p-2 rounded-full ${isPaused ? "bg-white" : "bg-white"} hover:bg-opacity-80`}
+          className={`p-2 rounded-full bg-white hover:bg-opacity-80`}
         >
           {isPaused ? (
             <PlayArrow className="w-6 h-6 text-black" />
