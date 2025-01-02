@@ -13,3 +13,12 @@
 .overflow-hidden {
   overflow: hidden;
 }
+/* Default .bottom-10 class */
+
+
+/* Media query for xxs screens with max-width of 300px */
+@media (min-width: 350px) {
+  .xxs\:bottom-\[-1\.8rem\] {
+      bottom: 4.2rem;
+  }
+}

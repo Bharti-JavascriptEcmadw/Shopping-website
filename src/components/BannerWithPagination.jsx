@@ -82,7 +82,7 @@ const BannerWithPagination = () => {
           <p className="text-lg text-gray-600 mb-5">
             {banners[currentPage].description}
           </p>
-          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white xxs:p-2">
+          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white xxs:p-2 ">
             {banners[currentPage].button}
             <span className="ml-2">&rarr;</span>
           </button>
@@ -91,7 +91,7 @@ const BannerWithPagination = () => {
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-10 flex items-center space-x-3">
+      <div className="absolute bottom-[-10rem] mb-5 flex items-center space-x-3 xxs:bottom-[-1.8rem]">
         {banners.map((_, index) => (
           <button
             key={index}
