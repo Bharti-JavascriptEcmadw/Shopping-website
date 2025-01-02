@@ -13,7 +13,7 @@ const BannerWithPagination = () => {
       description:
         "With the festivities fast-approaching, explore a range of gifts fit for all manner of recipients, ready to deliver or collect in-store.",
       button: "Discover more",
-      image: "/assets/img/11.jpg", // Replace with actual image URLs
+      image: "/assets/img/23.jpg", // Replace with actual image URLs
     },
     {
       logo: "Aēsop.",
@@ -22,7 +22,7 @@ const BannerWithPagination = () => {
       description:
         "The Home Necessities Duo, Adventurer Hand Care Trio, Basin Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
       button: "Explore Bundles",
-      image: "/assets/img/2.jpg",
+      image: "/assets/img/11.jpg",
     },
     {
       logo: "Aēsop.",
@@ -31,7 +31,7 @@ const BannerWithPagination = () => {
       description:
         "Find a variety of gift-giving options, ideal for honouring treasured colleagues and clients. Trained consultants will be pleased to guide your selections and assist with delivery.",
       button: "Learn More About the Services",
-      image: "/assets/img/3.jpg",
+      image: "/assets/img/6m.jpg",
     },
   ];
 
@@ -57,7 +57,7 @@ const BannerWithPagination = () => {
       {/* Banner Content */}
       <div className="flex flex-col lg:flex-row items-center justify-between w-[100%] max-w-[1500px] h-[80%] bg-[#fdfbf6]">
         {/* Right Content (Image) */}
-        <div className="relative w-full lg:w-1/2 h-full order-1 lg:order-2">
+        <div className="relative w-full lg:w-1/2 h-80 lg:h-full order-1 lg:order-2">
           <img
             src={banners[currentPage].image}
             alt="Banner"
