@@ -55,7 +55,7 @@ const BannerWithPagination = () => {
   return (
     <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6]">
       {/* Banner Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-[100%] max-w-[1500px] h-[80%] bg-[#fdfbf6]">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] h-[80%] bg-[#fdfbf6]">
         {/* Right Content (Image) */}
         <div className="relative w-full lg:w-1/2 h-80 lg:h-full order-1 lg:order-2">
           <img
@@ -96,23 +96,26 @@ const BannerWithPagination = () => {
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-10 flex items-center space-x-3">
-        {banners.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentPage(index)}
-            className={`w-4 h-4 rounded-full ${
-              currentPage === index
-                ? "bg-gray-800"
-                : "bg-gray-300 hover:bg-gray-900"
-            }`}
-          ></button>
-        ))}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col lg:flex-row items-center space-x-3 space-y-3 lg:space-y-0 lg:space-x-3">
+        {/* Pagination Bullets */}
+        <div className="flex space-x-3">
+          {banners.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              className={`w-4 h-4 rounded-full ${
+                currentPage === index
+                  ? "bg-gray-800"
+                  : "bg-gray-300 hover:bg-gray-900"
+              }`}
+            ></button>
+          ))}
+        </div>
 
         {/* Pause/Play Button with Material UI Icons */}
         <button
           onClick={togglePause}
-          className={`ml-4 p-2 rounded-full ${isPaused ? "bg-white" : "bg-white"} hover:bg-opacity-80`}
+          className={`p-2 rounded-full ${isPaused ? "bg-white" : "bg-white"} hover:bg-opacity-80`}
         >
           {isPaused ? (
             <PlayArrow className="w-6 h-6 text-black" />
