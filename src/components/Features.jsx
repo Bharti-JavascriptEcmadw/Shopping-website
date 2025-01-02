@@ -84,14 +84,18 @@ const Features = () => {
 
         {/* Feature Cards Container */}
         <div
-          className="flex gap-8 px-4 overflow-x-auto scroll-smooth justify-center"
+          className="flex gap-4 px-4 overflow-x-auto scroll-smooth justify-center items-center"
           ref={scrollRef}
-          style={{ maxWidth: "calc(100% - 100px)" }} // Ensure buttons don't overlap with the cards
+          style={{
+            maxWidth: "100%", // Ensure the container doesn't overflow
+            paddingLeft: "0", // No extra padding on the left
+            paddingRight: "0", // No extra padding on the right
+          }}
         >
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white shadow-md p-4 text-center w-80 sm:w-96 md:w-104 flex-shrink-0"
+              className="bg-white shadow-md p-4 text-center w-64 sm:w-72 md:w-80 flex-shrink-0"
             >
               <img
                 src={feature.image}
