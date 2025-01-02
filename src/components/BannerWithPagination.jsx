@@ -18,19 +18,19 @@ const BannerWithPagination = () => {
     {
       logo: "Aēsop.",
       head:"Online only",
-      title: "Four bundles for hair, hands",
+      title: "Four bundles for hair, hands and home",
       description:
-        " Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
+        "The Home Necessities Duo, Adventurer Hand Care Trio, Basin Essentials and Hair Care Duo are arranged in a gift box suitable for sending directly to recipients. Available exclusively on aesop.com.",
       button: "Explore Bundles",
-      image: "/assets/img/6m.jpg",
+      image: "/assets/img/23.jpg",
     },
     {
       logo: "Aēsop.",
       head:"Token of Appreciation",
       title: "Corporate gifts",
       description:
-        "Find a variety of gift-giving options, Trained consultants will be pleased to guide your selections and assist with delivery.",
-      button: "Learn About the Services",
+        "Find a variety of gift-giving options, ideal for honouring treasured colleagues and clients. Trained consultants will be pleased to guide your selections and assist with delivery.",
+      button: "Learn More About the Services",
       image: "/assets/img/4l.jpg",
     },
   ];
@@ -53,9 +53,10 @@ const BannerWithPagination = () => {
   };
 
   return (
-    <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6] gap-5">
+    <div className="relative flex flex-col items-center w-full h-screen bg-[#fdfbf6] xss:gap-4">
       {/* Banner Content */}
-      <div className="flex flex-col lg:flex-row items-center justify-between w-full max-w-[1500px] min-h-screen  lg:h-[40%] bg-[#fdfbf6] xxs:flex-col items-center w-full  flex gap-5">
+      <div className="flex flex-col lg:flex-row items-center justify-between w-[100%] max-w-[1500px] max-h-[90%]
+      xss:h-auto bg-red-500">
         {/* Right Content (Image) */}
         <div className="relative w-full lg:w-1/2 h-full order-1 lg:order-2">
           <img
@@ -66,47 +67,48 @@ const BannerWithPagination = () => {
         </div>
 
         {/* Left Content */}
-        <div className="w-full lg:w-1/2 p-5 lg:p-10 space-y-6 order-2 lg:order-1 flex flex-col gap-5">
+        <div className="w-full lg:w-1/2 p-10 space-y-6 order-2 lg:order-1 flex flex justify-space-between gap-7 xxs:gap-4 xxs:text-sm ">
+        <div>
           <h1 className="text-3xl font-semibold text-gray-800 mt-6">
             {banners[currentPage].logo}
-          </h1>
+          </h1></div>
+          <div>
           <p className="text-sm font-semibold text-gray-900 mt-2 mb-5">
             {banners[currentPage].head}
           </p>
 
-          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-800 mb-5">
+          <h2 className="text-4xl font-semibold text-gray-800 mb-5">
             {banners[currentPage].title}
           </h2>
-          <p className="text-lg text-gray-600 mb-5">
+          <p className="text-lg xxs:text-sm text-gray-600 mb-5">
             {banners[currentPage].description}
           </p>
-          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white">
+          <button className="flex items-center px-6 py-3 text-sm font-medium text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white  xxs:text-sm xxs:p-3 ">
             {banners[currentPage].button}
             <span className="ml-2">&rarr;</span>
           </button>
+          </div>
         </div>
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-2 mb-4 flex flex-col items-center space-y-3 w-full">
-        <div className="flex items-center space-x-3">
-          {banners.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index)}
-              className={`w-4 h-4 rounded-full ${
-                currentPage === index
-                  ? "bg-gray-800"
-                  : "bg-gray-300 hover:bg-gray-900"
-              }`}
-            ></button>
-          ))}
-        </div>
+      <div className="absolute bottom-10 flex items-center space-x-3">
+        {banners.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentPage(index)}
+            className={`w-4 h-4 rounded-full ${
+              currentPage === index
+                ? "bg-gray-800"
+                : "bg-gray-300 hover:bg-gray-900"
+            }`}
+          ></button>
+        ))}
 
         {/* Pause/Play Button with Material UI Icons */}
         <button
           onClick={togglePause}
-          className={`ml-4 p-2 rounded-full bg-white hover:bg-opacity-80`}
+          className={`ml-4 p-2 rounded-full ${isPaused ? "bg-white" : "bg-white"} hover:bg-opacity-80`}
         >
           {isPaused ? (
             <PlayArrow className="w-6 h-6 text-black" />
