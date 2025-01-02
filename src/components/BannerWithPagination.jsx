@@ -96,7 +96,7 @@ const BannerWithPagination = () => {
       </div>
 
       {/* Pagination Bullets and Pause/Play Button */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col sm:flex-row items-center justify-center space-x-3 sm:space-x-6 space-y-3 sm:space-y-0">
+      <div className="w-full py-6 sm:py-10 flex justify-center items-center space-x-3">
         {/* Pagination Bullets */}
         <div className="flex space-x-2 sm:space-x-3">
           {banners.map((_, index) => (
@@ -115,7 +115,7 @@ const BannerWithPagination = () => {
         {/* Pause/Play Button with Material UI Icons */}
         <button
           onClick={togglePause}
-          className={`p-2 rounded-full bg-white hover:bg-opacity-80`}
+          className="p-2 rounded-full bg-white hover:bg-opacity-80"
         >
           {isPaused ? (
             <PlayArrow className="w-6 h-6 text-black" />
